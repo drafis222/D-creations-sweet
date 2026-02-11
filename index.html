@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D`Creations Sweet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">D`Creations Sweet</div>
+        <ul>
+            <li><a href="#" data-page="home">Home</a></li>
+            <li><a href="#" data-page="about">About</a></li>
+            <li><a href="#" data-page="products">Products</a></li>
+            <li><a href="#" data-page="contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="page active">
+        <div class="hero">
+            <h1>Sweet Moments, Baked with Love</h1>
+            <p>Located in Hombay, Binaliw, Danao City</p>
+            <button onclick="showPage('products')">View Our Products</button>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="page">
+        <div class="container card">
+            <h2>About D`Creations Sweet</h2>
+            <p>
+                D`Creations Sweet is a home-based bakery located in 
+                Hombay, Binaliw, Danao City. We specialize in freshly 
+                made cakes and Filipino desserts crafted with love.
+            </p>
+            <p>
+                Our mission is simple — to bring sweetness to every 
+                celebration and everyday moment.
+            </p>
+        </div>
+    </section>
+    <!-- PRODUCTS -->
+<section id="products" class="page">
+    <div class="container">
+        <h2>Our Products</h2>
+
+        <div class="product-grid">
+            <div class="product-card" onclick="openModal('cake')">
+                <img src="cake-1.jpg">
+                <h3>Cake</h3>
+            </div>
+
+            <div class="product-card" onclick="openModal('mango')">
+                <img src="mango-float-1.jpg" height="150px">
+                <h3>Mango Float</h3>
+            </div>
+
+            <div class="product-card" onclick="openModal('cupcake')">
+                <img src="cupcake-1.jpg">
+                <h3>Cupcakes</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- MODAL -->
+<div id="productModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+
+        <h2 id="modalTitle"></h2>
+
+        <div class="slider">
+            <img id="modalImage">
+            <button class="prev" onclick="changeSlide(-1)">❮</button>
+            <button class="next" onclick="changeSlide(1)">❯</button>
+        </div>
+
+        <p id="modalDescription"></p>
+        <h3 id="modalPrice"></h3>
+
+        <a id="orderBtn" target="_blank">
+            <button>Order Now</button>
+        </a>
+    </div>
+</div>
+</section>
+    <!-- CONTACT -->
+    <section id="contact" class="page">
+        <div class="container card">
+            <h2>Contact Us</h2>
+            <p><strong>Location:</strong> Hombay, Binaliw, Danao City</p>
+            <p><strong>Phone:</strong> 0960 358 8486</p>
+            <div class="socials">
+                <h3>Follow Us</h3>
+
+                <a href="https://www.facebook.com/tristanmyles.limotan.1" target="_blank" class="social-link">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+
+                <a href="https://www.instagram.com/tristanmylesl/" target="_blank" class="social-link">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+
+                <a href="https://m.me/tristanmyles.limotan.1/" target="_blank" class="social-link">
+                    <i class="fab fa-facebook-messenger"></i> Messenger
+                </a>
+            </div>
+
+            <p>Message us for orders and inquiries!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 D`Creations Sweet</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
